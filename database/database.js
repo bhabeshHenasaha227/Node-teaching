@@ -26,6 +26,7 @@ async function main() {
     await client.connect();
     const database=client.db("Bhabesh_demo");
     const users= database.collection('users');
+    // read
     const query = { firstname: 'Bhabesh' };
     const user = await users.findOne(query);
     console.log("user ----",user);
